@@ -37,23 +37,23 @@
 		}
     },
     "containerEnv": {
-        "DISPLAY": "unix:0",
+    //    "DISPLAY": "unix:0",
         "ROS_LOCALHOST_ONLY": "1",
         "ROS_DOMAIN_ID": "42"
     },
     "runArgs": [
-        "--gpus=all", //Remove if host machine doesn't have nvidia hardware installed.
-        "--net=host",
-        "-e", "DISPLAY=${env:DISPLAY}"
+        "--gpus=all" //Remove if host machine doesn't have nvidia hardware installed.
+    //    "--net=host",
+    //    "-e", "DISPLAY=${env:DISPLAY}"
     ],
     "mounts": [
-       "source=/tmp/.X11-unix,target=/tmp/.X11-unix,type=bind,consistency=cached", //remove if desktop-lite feature is sufficient for display requirements
+    //   "source=/tmp/.X11-unix,target=/tmp/.X11-unix,type=bind,consistency=cached", //remove if desktop-lite feature is sufficient for display requirements
         "source=/dev/dri,target=/dev/dri,type=bind,consistency=cached",
-        "source=${localWorkspaceFolder}/cache/humble/build,target=/home/ws/build,type=bind",
-        "source=${localWorkspaceFolder}/cache/humble/install,target=/home/ws/install,type=bind",
-        "source=${localWorkspaceFolder}/cache/humble/log,target=/home/ws/log,type=bind"
+        "source=${localWorkspaceFolder}/../cache/humble/build,target=/home/ws/build,type=bind",
+        "source=${localWorkspaceFolder}/../cache/humble/install,target=/home/ws/install,type=bind",
+        "source=${localWorkspaceFolder}/../cache/humble/log,target=/home/ws/log,type=bind"
     ],
-    "postCreateCommand": "sudo rosdep update && sudo rosdep install --from-paths src --ignore-src -y && sudo chown -R USERNAME /home/ws/ && bash ${localWorkspaceFolder}/.devcontainer/installation-script.sh"
+    "postCreateCommand": "sudo rosdep update && sudo rosdep install --from-paths ros_ws/src --ignore-src -y && sudo chown -R uazam /home/ws/ && bash ./.devcontainer/installation-script.sh"
 }
 
 
