@@ -1,5 +1,5 @@
 FROM osrf/ros:humble-desktop-full-jammy
-ARG USERNAME=root
+ARG USERNAME=uazam
 ARG USER_UID=1000
 ARG USER_GID=$USER_UID
 

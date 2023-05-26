@@ -1,21 +1,14 @@
 {
-    "name": "ROS 2 Development Container",
+    "name": "ROS 2 Ubuntu Jammy 22.04 Development Container",
     "privileged": true,
-    "remoteUser": "root",
+    "remoteUser": "uazam",
     "build": {
         "dockerfile": "Dockerfile",
         "args": {
-            "USERNAME": "root"
+            "USERNAME": "uazam"
         }
     },
     "features": {
-        "ghcr.io/devcontainers/features/common-utils:2": {
-            "installZsh": "true",
-            "username": "vscode",
-            "userUid": "1000",
-            "userGid": "1000",
-            "upgradePackages": "true"
-        },
         "ghcr.io/devcontainers/features/git:1": {
             "version": "latest",
             "ppa": "false"
@@ -54,7 +47,7 @@
         "-e", "DISPLAY=${env:DISPLAY}"
     ],
     "mounts": [
-       "source=/tmp/.X11-unix,target=/tmp/.X11-unix,type=bind,consistency=cached",
+       "source=/tmp/.X11-unix,target=/tmp/.X11-unix,type=bind,consistency=cached", //remove if desktop-lite feature is sufficient for display requirements
         "source=/dev/dri,target=/dev/dri,type=bind,consistency=cached",
         "source=${localWorkspaceFolder}/cache/humble/build,target=/home/ws/build,type=bind",
         "source=${localWorkspaceFolder}/cache/humble/install,target=/home/ws/install,type=bind",
