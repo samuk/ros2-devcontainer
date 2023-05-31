@@ -4,4 +4,5 @@
 
 GUI desktop access tutorial available [here.](https://github.com/devcontainers/features/tree/main/src/desktop-lite)
 
+Review nvidia hardware availability and modify devcontainer.json file before building container
 Additional packages installed. (Check installation-script.sh for detailed view)
