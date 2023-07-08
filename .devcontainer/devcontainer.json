@@ -53,7 +53,7 @@
         "source=${localWorkspaceFolder}/../cache/humble/install,target=/home/ws/install,type=bind",
         "source=${localWorkspaceFolder}/../cache/humble/log,target=/home/ws/log,type=bind"
     ],
-    "postCreateCommand": "sudo rosdep update && sudo rosdep install --from-paths ros_ws/src --ignore-src -y && sudo chown -R uazam /home/ws/ && bash ./.devcontainer/installation-script.sh"
+    "postCreateCommand": "sudo rosdep update  && sudo chown -R uazam /home/ws/ && bash ./.devcontainer/installation-script.sh"
 }
 
 
