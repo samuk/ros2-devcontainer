@@ -4,6 +4,7 @@
             "name": "ROS 2 clang",
             "includePath": [
                 "${workspaceFolder}/ros2_ws/src/**",
+                "${workspaceFolder}/ros2_ws/install/**",
                 "/opt/ros/humble/include/**",
                 "/usr/include/**"
             ],
