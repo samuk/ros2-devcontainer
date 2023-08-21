@@ -6,8 +6,9 @@
 1) Download and install [VScode](https://code.visualstudio.com/Download)
 2) In VScode go Extensions > Install devcontainer
 3) Download and extract this repo
-4) Open this repo in VScode
-5)  Ctrl+shift+p then click “Reopen in devcontainer” to build the environment and start.
+4) Edit devcontainer.json for your GPU/ graphics card
+5) Open this repo in VScode
+6)  Ctrl+shift+p then click “Reopen in devcontainer” to build the environment and start.
 
 
 ## Features added : Desktop-lite, Nvidia Cuda, python, git
