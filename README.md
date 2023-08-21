@@ -1,5 +1,15 @@
 # Development container for ROS2 Humble Hawksbill
 ## OS : Ubuntu 22.04 Jammy Jellyfish
+
+## Install
+
+1) Download and install [VScode](https://code.visualstudio.com/Download)
+2) In VScode go Extensions > Install devcontainer
+3) Download and extract this repo
+4) Open this repo in VScode
+5)  Ctrl+shift+p then click “Reopen in devcontainer” to build the environment and start.
+
+
 ## Features added : Desktop-lite, Nvidia Cuda, python, git
 Additional packages installed. (Check installation-script.sh for detailed view)
 
